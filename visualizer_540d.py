@@ -130,7 +130,7 @@ class VISUALIZER(QWidget, Ui_Form):
         dialog.resize(1000, 800)
         dialog.setNameFilter("DAT Files (*.dat)")
         dialog.setWindowTitle("Select .dat files.")
-        dialog.setDirectory(self.last_dir)
+        dialog.setDirectory(str(self.last_dir))
 
         if not dialog.exec_():
             return
@@ -140,7 +140,7 @@ class VISUALIZER(QWidget, Ui_Form):
             return
 
         self.last_dir = dialog.directory().absolutePath()
-        self.lineEdit_work_folder.setText(self.last_dir)
+        self.lineEdit_work_folder.setText(str(self.last_dir))
 
         self.open_files()
 
