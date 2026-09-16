@@ -23,6 +23,7 @@ SAXS_VISUALIZATION_GUI/
 │   └── BSA_21_001_norm_00000.dat
 │   └── PBS_13_001_norm_00000.dat
 ├── images/
+│   └── delete.svg
 │   └── visualizer_avg.png
 │   └── visualizer_curves.png
 │   └── visualizer_files.png
