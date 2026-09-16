@@ -52,32 +52,39 @@ The exact versions of the dependencies should be defined in the project's enviro
 
 ## Installation
 
+The recommended installation method for the SAPUCAIA Beamline Visualizer is **Conda**. The provided `environment.yml` file contains the Python version and dependencies required to run the application.
+
+### Requirements
+
+Before installing the SAPUCAIA Beamline Visualizer, make sure that **Conda** is installed on your computer.
+
+If Conda is not installed, you can install **Miniconda**, a lightweight Conda distribution, before proceeding.
+
 ### 1. Clone the repository
 
 Clone the repository using:
 
 ```bash
 git clone https://github.com/Juliadsrd/saxs_visualization_gui.git
-cd SAXS_VISUALIZATION_GUI
+cd saxs_visualization_gui
 ```
 
-### 2. Create a Python environment
+### 2. Create the Conda environment
 
-It is recommended to use an isolated Python environment to avoid conflicts with other Python packages.
-
-Using Conda:
+Create the environment using the `environment.yml` file provided with the repository:
 
 ```bash
-conda create -n saxs-visualizer python=3.11
+conda env create -f environment.yml
+```
+
+This automatically installs the required Python version and project dependencies.
+
+### 3. Activate the environment
+
+Activate the newly created environment:
+
+```bash
 conda activate saxs-visualizer
-```
-
-### 3. Install the dependencies
-
-Install the required Python packages:
-
-```bash
-pip install PyQt5 matplotlib numpy pandas
 ```
 
 ### 4. Run the application
@@ -85,10 +92,27 @@ pip install PyQt5 matplotlib numpy pandas
 From the project directory, run:
 
 ```bash
-python visualizer_540.py
+python visualizer_540d.py
 ```
 
 The SAPUCAIA Beamline Visualizer graphical interface should then open.
+
+### Updating the software
+
+If the repository has already been cloned and a new version is available, update the local copy using:
+
+```bash
+git pull origin main
+```
+
+If the project's dependencies have changed, update the Conda environment using:
+
+```bash
+conda activate saxs-visualizer
+conda env update -f environment.yml --prune
+```
+
+The `--prune` option removes packages that are no longer specified in `environment.yml`.
 
 ## Input Data
 
