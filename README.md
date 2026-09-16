@@ -54,10 +54,10 @@ The exact versions of the dependencies should be defined in the project's enviro
 
 ### 1. Clone the repository
 
-Once the repository is publicly available, clone it using:
+Clone the repository using:
 
 ```bash
-git clone [REPOSITORY_URL]
+git clone https://github.com/Juliadsrd/saxs_visualization_gui.git
 cd SAXS_VISUALIZATION_GUI
 ```
 
