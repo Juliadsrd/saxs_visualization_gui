@@ -27,6 +27,7 @@ SAXS_VISUALIZATION_GUI/
 │   └── visualizer_curves.png
 │   └── visualizer_files.png
 │   └── visualizer_icon.png
+├── environment.yml
 ├── LICENSE
 ├── README.md
 ├── RGB_codes.py
@@ -43,22 +44,19 @@ SAXS_VISUALIZATION_GUI/
 ## Requirements
 
 The software requires Python 3 and the following Python packages:
+
 * PyQt5
 * Matplotlib
 * NumPy
 * Pandas
 
-The exact versions of the dependencies should be defined in the project's environment or dependency file to ensure reproducibility.
+The exact Python version and package dependencies are specified in the project's `environment.yml` file to ensure reproducibility.
 
 ## Installation
 
-The recommended installation method for the SAPUCAIA Beamline Visualizer is **Conda**. The provided `environment.yml` file contains the Python version and dependencies required to run the application.
+The recommended installation method for the SAPUCAIA Beamline Visualizer is **Conda**.
 
-### Requirements
-
-Before installing the SAPUCAIA Beamline Visualizer, make sure that **Conda** is installed on your computer.
-
-If Conda is not installed, you can install **Miniconda**, a lightweight Conda distribution, before proceeding.
+If Conda is not installed on your computer, install **Miniconda**, a lightweight Conda distribution that provides the Conda package and environment manager.
 
 ### 1. Clone the repository
 
@@ -77,7 +75,7 @@ Create the environment using the `environment.yml` file provided with the reposi
 conda env create -f environment.yml
 ```
 
-This automatically installs the required Python version and project dependencies.
+This automatically installs the required Python version and dependencies.
 
 ### 3. Activate the environment
 
@@ -92,7 +90,7 @@ conda activate saxs-visualizer
 From the project directory, run:
 
 ```bash
-python visualizer_540d.py
+python visualizer_540.py
 ```
 
 The SAPUCAIA Beamline Visualizer graphical interface should then open.
