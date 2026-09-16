@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Terminal=false
-Version=1.0
-Name=dat_visualizer
-Exec=dat_visualizer %U
-Icon=/usr/local/scripts/gui/saxs_visualization_gui/VISUALIZER-icon.png
-Categories=Utility
