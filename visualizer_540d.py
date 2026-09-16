@@ -25,6 +25,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtGui import QIcon
 from PyQt5 import uic
 from PyQt5.QtCore import QTimer
+from pathlib import Path
 
 from matplotlib.backends.backend_qt5agg import (
     FigureCanvasQTAgg as FigureCanvas,
@@ -55,7 +56,7 @@ class VISUALIZER(QWidget, Ui_Form):
 
         self.setupUi(self)
         self.setWindowIcon(QIcon("images/visualizer_icon.png"))
-        self.default_dir = "/ibira/lnls/beamlines/sapucaia/proposals/"
+        self.default_dir = Path.home()
         self.last_dir = self.default_dir
 
         self.init_plot_buttons()
@@ -87,7 +88,7 @@ class VISUALIZER(QWidget, Ui_Form):
         file1 = self.new_files[0]
         unit = []
 
-        with open(file1, 'r') as file:
+        with open(file1, 'r', encoding="utf-8") as file:
             for i in range(2):  
                 header = (file.readline())
                 unit.append(header)
