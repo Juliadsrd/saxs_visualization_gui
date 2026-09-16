@@ -13,7 +13,7 @@ for compatibility with the data processing and visualization routines.
 """
 
 __author__ = ["Joao Paulo Castro Zerba", "Julia Dias de Souza"]
-__email__ = ["joao.zerba@lnls.br", "julia.dias@lnls.br"]
+__email__ = ["joao.zerba@lnls.br", "julia.dias@lnls.br"] 
 __maintainer__ = "Joao Paulo Castro Zerba, Julia Dias de Souza"
 __version__ = "1.0.0"
 __license__ = "GPLv3"
