@@ -1,0 +1,173 @@
+# SAPUCAIA Beamline Visualizer
+
+**SAPUCAIA Beamline Visualizer** is a graphical user interface (GUI) developed for the visualization and analysis of Small-Angle X-ray Scattering (SAXS) data collected at the SAPUCAIA beamline of the Brazilian Synchrotron Light Laboratory (LNLS), part of the Brazilian Center for Research in Energy and Materials (CNPEM).
+
+The software provides tools for loading, visualizing, comparing, and processing SAXS data, with the goal of supporting efficient data inspection during beamline operation and scientific experiments.
+
+## Features
+
+* Visualization of SAXS curves from `.dat` files
+* Multiple-curve visualization and comparison
+* Selection and deselection of individual curves
+* Customization of X and Y axis scales
+* Curve deletion from the visualization
+* Calculation and visualization of average curves
+* Export of averaged data
+* Graphical interface designed for use with SAXS measurements
+
+## Project Structure
+
+```text
+SAXS_VISUALIZATION_GUI/
+├── examples/
+│   └── BSA_21_001_norm_00000.dat
+│   └── PBS_13_001_norm_00000.dat
+├── images/
+│   └── visualizer_avg.png
+│   └── visualizer_curves.png
+│   └── visualizer_files.png
+│   └── visualizer_icon.png
+├── LICENSE
+├── README.md
+├── RGB_codes.py
+├── visualizer_540.py
+└── visualizer_540d.ui
+```
+
+### Main files
+
+* `visualizer_540.py` — Main Python source code of the graphical interface and data visualization functionality.
+* `visualizer_540d.ui` — Qt Designer interface file used to define the graphical user interface.
+* `RGB_codes.py` — Color definitions used by the graphical interface.
+
+## Requirements
+
+The software requires Python 3 and the following Python packages:
+* PyQt5
+* Matplotlib
+* NumPy
+* Pandas
+
+The exact versions of the dependencies should be defined in the project's environment or dependency file to ensure reproducibility.
+
+## Installation
+
+### 1. Clone the repository
+
+Once the repository is publicly available, clone it using:
+
+```bash
+git clone [REPOSITORY_URL]
+cd SAXS_VISUALIZATION_GUI
+```
+
+### 2. Create a Python environment
+
+It is recommended to use an isolated Python environment to avoid conflicts with other Python packages.
+
+Using Conda:
+
+```bash
+conda create -n saxs-visualizer python=3.11
+conda activate saxs-visualizer
+```
+
+### 3. Install the dependencies
+
+Install the required Python packages:
+
+```bash
+pip install PyQt5 matplotlib numpy pandas
+```
+
+### 4. Run the application
+
+From the project directory, run:
+
+```bash
+python visualizer_540.py
+```
+
+The SAPUCAIA Beamline Visualizer graphical interface should then open.
+
+## Input Data
+
+The Visualizer is designed to work with SAXS data files in `.dat` format generated during measurements at the SAPUCAIA beamline.
+The expected data format should be described here, including:
+* File structure
+* Header information
+* Column definitions
+* Units
+* Required fields
+
+## Example Data
+
+Two example SAXS data files are provided in the `examples/` directory.
+These files can be used to verify the installation and demonstrate the
+expected input format of the software.
+
+- `BSA_21_001_norm_00000.dat`
+- `PBS_13_001_norm_00000.dat`
+
+## Using the Visualizer
+
+### Loading data
+
+Use the file selection interface to select one or more `.dat` files for visualization.
+
+<p align="center">
+  <img src="images/visualizer_files.png" alt="DAT files" width="600">
+</p>
+
+### Selecting curves
+
+Individual curves can be selected or deselected from the list of loaded files. Only selected curves are displayed in the plot.
+
+<p align="center">
+  <img src="images/visualizer_curves.png" alt="SAXS curves" width="600">
+</p>
+
+### Plot configuration
+
+The software allows the user to modify the visualization parameters, including:
+* X-axis scale
+* Y-axis scale
+* Curve selection
+* Curve removal
+* Curve transparency
+
+### Averaging curves
+
+The software provides functionality for calculating an average curve from selected SAXS datasets.
+The resulting averaged curve can be saved as a `.dat` file for further analysis.
+
+<p align="center">
+  <img src="images/visualizer_avg.png" alt="Averaging curves" width="600">
+</p>
+
+## Citation
+
+If you use SAPUCAIA Beamline Visualizer in your research, please cite:
+
+> Zerba, J. P. C.; Souza, J. D. *SAPUCAIA Beamline Visualizer*. Zenodo.
+> DOI: To be assigned upon publication.
+
+## License
+
+SAPUCAIA Beamline Visualizer is distributed under the terms of the **GNU General Public License version 3 (GPLv3)**.
+You may use, study, modify, and redistribute the software under the terms of this license.
+The complete license text is available in the [`LICENSE`](LICENSE) file.
+
+## Acknowledgements
+
+This software was developed for the SAPUCAIA beamline at the Brazilian Synchrotron Light Laboratory (LNLS), part of the Brazilian Center for Research in Energy and Materials (CNPEM).
+The authors acknowledge the support of CNPEM and the LNLS team in the development and commissioning of the software.
+
+## Contact
+
+For information, support, or questions regarding the SAPUCAIA beamline,
+please contact the beamline team:
+
+- **Facility:** SAPUCAIA Beamline
+- **Facility E-mail:** sapucaia@lnls.br
+- **Website:** [SAPUCAIA Beamline – LNLS](https://lnls.cnpem.br/facilities/sapucaia-en/)
