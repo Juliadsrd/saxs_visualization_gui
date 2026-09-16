@@ -77,6 +77,7 @@ class VISUALIZER(QWidget, Ui_Form):
         self.xScale_button.clicked.connect(self.update_xscale)
         self.yScale_button.clicked.connect(self.update_yscale)
         self.del_curves_button.clicked.connect(self.delete_curves)
+        self.del_curves_button.setIcon(QIcon("images/delete.svg"))
         self.DAT_path_button.clicked.connect(self.select_files) 
         self.select_plot_checkbox.stateChanged.connect(self.select_deselect_curves)
         self.avg_button.clicked.connect(self.selected_avg_curves)
